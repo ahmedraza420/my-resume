@@ -11,23 +11,25 @@
     margin: 0;
     padding: 0;
     font-size: 12px;
+    box-sizing: border-box;
 }   
 
 .main {
     display: flex;
     flex-flow: column nowrap;
-    height: 100vh;
+    width: 100vh;
     margin: 30px 0;
 }
 
-/* .main > * > * {
-    margin: 0 20px;
-} */
+.main > * {
+    width: inherit;
+    margin: 20px;
+}
 
 .hero {
     flex: 0 0 100px;
     height: 100px;
-    width: 100%;
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -50,12 +52,14 @@
 .contact {
     background: #f1f1f1;
     height: 50px;
-    width: 100%;
     display: flex;
-    flex: 1 0 50px;
+    flex: 0 0 50px;
     flex-flow: row nowrap;
     justify-content: center;
-    gap: 10px;
+    align-items: center;
+    margin: 0;
+    padding: 0 20px;  
+    width: 100vh;    
 }
 
 .content {
@@ -65,7 +69,7 @@
     display:flex;
     flex-wrap: nowrap;
     align-items:stretch;
-    margin: 20px 40px;
+    margin: 20px;
     gap: 30px;
     justify-content: space-between;
 }
@@ -73,22 +77,24 @@
 .col1, .col2 {
     display: flex;
     flex-flow: column nowrap;
-    gap: 30px;
+    gap: 10px;
     max-width: fit-content;
 }
 
 .col1 {
-    flex: 2 1 90vh;
+    flex: 1 1 70%;
 }
 
 .col2 {
-    flex: 0 1 auto;
-    width: 40%;
-    justify-content: stretch;
+    flex: 1 0 auto;
+    width: 30%;
+    justify-content: flex-start;
+    display: flex;
 }
 
 .col2 > * {
     flex: 1 1 100px;
+    padding-bottom: 20px;
 }
 
 .education, .work-exp {
@@ -102,6 +108,7 @@
     font-weight: 600;
     color: #2cbfaa;
     margin: 5px 0;
+    width: max-content;
     letter-spacing: 1px;
 }
 
@@ -164,6 +171,39 @@ span {
     font-weight: 400;
     letter-spacing: 1px;
 
+}
+
+.proj {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.heading1 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.date1 {
+    color: #9c9c9c;
+    font-size: 13px;
+}
+
+.lang-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.language {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.subtextcolor {
+    font-style: italic;
+    color: #2cbfaa;
 }
 
 .interests {
