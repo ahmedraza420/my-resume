@@ -100,7 +100,7 @@ a {
     width: auto;
     flex: 1 1 100px;
     display:flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items:stretch;
     margin: 20px 10px;
     gap: 20px;
@@ -111,18 +111,20 @@ a {
     display: flex;
     flex-flow: column nowrap;
     gap: 10px;
-    max-width: fit-content;
 }
 
 .col1 {
-    flex: 1 1 (70%-20px);
+    flex: 1 1 50%;
+    min-width: 400px;
+    max-width: 800px;
 }
 
 .col2 {
-    flex: 1 0 auto;
-    width: 30%;
+    flex: 1 1 30%;
+    width: 250px;
     justify-content: flex-start;
     display: flex;
+    max-width: 500px;
 }
 
 .col2 > * {
@@ -161,7 +163,7 @@ a {
     color: #9c9c9c;
 }
 
-.des-heading {
+.description {
     font-size: 13px;
     font-weight: 500;
 }
@@ -170,6 +172,8 @@ ul {
     list-style-type: "-" ;
     /* list-style-position: inside; */
     padding-left: 5px;
+    display: flex;
+    flex-direction: column;
 }
 
 li {
