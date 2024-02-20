@@ -23,7 +23,7 @@
 
 .main > * {
     width: auto;
-    margin: 20px;
+
 }
 
 .hero {
@@ -52,21 +52,31 @@
 
 .contacts {
     background: #f1f1f1;
-    height: 50px;
+    min-height: auto;
     display: flex;
-    flex: 0 0 50px;
-    flex-flow: row nowrap;
+    flex: 1 0 50px;
+    flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
     gap: 10px;
     margin: 0;
-    padding: 0 20px;  
+    padding: 10px 20px;  
     width: 100%;    
 }
 
 .contact {
     display: flex;
     flex-flow: row nowrap;
+    gap: 5px;
+    align-items: center;
+}
+
+
+a, a:visited {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-flow: row nowrap;  
     gap: 5px;
     align-items: center;
 }
@@ -93,8 +103,8 @@
     display:flex;
     flex-wrap: nowrap;
     align-items:stretch;
-    margin: 20px;
-    gap: 30px;
+    margin: 20px 10px;
+    gap: 20px;
     justify-content: space-between;
 }
 
@@ -106,7 +116,7 @@
 }
 
 .col1 {
-    flex: 1 1 70%;
+    flex: 1 1 (70%-20px);
 }
 
 .col2 {
